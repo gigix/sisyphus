@@ -1,2 +1,4 @@
 android/assets/www
+android/bin
+android/gen
 ios/www
