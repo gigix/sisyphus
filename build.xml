@@ -1,0 +1,31 @@
+<project name='sisyphus' basedir='.'>	
+	<property name='android.dir' value='${basedir}/android' />
+	<property name='ios.dir' value='${basedir}/ios' />
+	
+	<property name='www.dir' value='${basedir}/www' />
+	<property name='android.www.dir' value='${android.dir}/assets/www' />
+	<property name='ios.www.dir' value='${ios.dir}/www' />
+	
+	<target name='clean'>
+		<ant antfile='${android.dir}/build.xml' dir='${android.dir}' target='clean' />
+		<delete dir='${android.www.dir}' />
+		<delete dir='${ios.www.dir}' />
+	</target>
+	
+	<target name='prebuild'>
+		<copy todir="${android.www.dir}">
+			<fileset dir="${www.dir}"/>
+		</copy>
+		<copy todir="${ios.www.dir}">
+			<fileset dir="${www.dir}"/>
+		</copy>
+	</target>
+	
+	<target name='build'>
+		<ant antfile='${android.dir}/build.xml' dir='${android.dir}' target='build' />
+	</target>
+
+	<target name='run' depends='clean,prebuild'>
+		<ant antfile='${android.dir}/build.xml' dir='${android.dir}' target='run' />
+	</target>
+</project>
