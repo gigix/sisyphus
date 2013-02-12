@@ -2,15 +2,20 @@
 	<h1>All My Rocks</h1>
 	<ul>
 		<li ng-repeat="rock in rocks" class='rock'>
-			{{rock.title}}
+			<input type='checkbox' id='rock_{{rock.id}}' />
+			<label for='rock_{{rock.id}}' class='btn'>{{rock.title}}</label>
 		</li>		
 	</ul>
 	
-	<span class='span2'>
-		<button class='btn btn-primary'><i class="icon-ok icon-white"></i>CREATE</button>
-	</span>
+	<div class='span1 push' />
+	
+	<div class='toolbar span5'>
+		<span class='span2'>
+			<button class='btn btn-primary'><i class="icon-ok icon-white"></i>CREATE</button>
+		</span>
 
-	<span class='span2'>
-		<button class='btn btn-danger'><i class="icon-remove icon-white"></i>DELETE</button>
-	</span>
+		<span class='span2'>
+			<button class='btn btn-danger'><i class="icon-remove icon-white"></i>DELETE</button>
+		</span>
+	</div>
 </div>

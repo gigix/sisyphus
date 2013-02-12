@@ -6,3 +6,16 @@ ul li {
 	list-style: none;
 	margin: 10px 0;
 }
+
+.toolbar {
+	position: fixed;
+	bottom: 0;
+	padding: 5px 0;
+	text-align: center;
+	background-color: #aaa;
+	opacity:0.9;
+}
+
+.push {
+	padding-bottom: 40px;
+}

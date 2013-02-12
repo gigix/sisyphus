@@ -1,4 +1,4 @@
-<project name='sisyphus' basedir='.'>	
+<project name='sisyphus' basedir='.' default='run'>	
 	<property name='android.dir' value='${basedir}/android' />
 	<property name='ios.dir' value='${basedir}/ios' />
 	
