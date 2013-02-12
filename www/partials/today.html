@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html ng-app>
-<head>
-	<title>Today's Rocks</title>
-</head>
-
-<body>
+<div ng-controller="TodayCtrl">
 	<h1>Today's Rocks</h1>
 	<ul>
+		<li ng-repeat="rock in rocks" class='rock'>
+			<button class="btn btn-large {{rock.done && 'btn-success' || 'btn-primary'}}">{{rock.title}}</button>
+		</li>		
 	</ul>
-</body>
-</html>
+</div>

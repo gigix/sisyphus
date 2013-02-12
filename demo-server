@@ -1,5 +1,5 @@
 #!/bin/bash
-cd `dirname $0`/assets/www
+cd `dirname $0`/www
 
 # use default port if called without args
 PORT=2600 

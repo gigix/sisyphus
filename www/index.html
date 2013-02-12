@@ -9,11 +9,31 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     </head>
     <body>
-		<div class='container' ng-view></div>
+		<div class="navbar navbar-fixed-top">  
+			<div class="navbar-inner">  
+				<div class="container">  
+					<div class="nav-collapse">  
+						<ul class="nav" ng-controller="NavCtrl">  
+							<li ng-class="navClass('home')"><a href="#/">Home</a></li>  
+							<li ng-class="navClass('today')"><a href="#/today">Today's Rocks</a></li>  
+							<li ng-class="navClass('rocks')"><a href="#/rocks">All My Rocks</a></li>  
+							<li ng-class="navClass('stats')"><a href="#/stats">Statistics</a></li>  
+						</ul>  
+					</div><!--/.nav-collapse -->  
+				</div>  
+			</div>  
+		</div>
+	
+		<div class='container'>
+			<div class='row'>
+				<div class='span12' ng-view></div>
+			</div>
+		</div>
         <script type="text/javascript" src="cordova-2.4.0.js"></script>
 		<script type="text/javascript" src="js/angular.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
 		<script type="text/javascript" src="js/controllers.js"></script>
+		<script type="text/javascript" src="js/navigation.js"></script>
 		<script src="js/bootstrap.min.js"></script>
     </body>
 </html>
