@@ -22,8 +22,20 @@ function TodayCtrl($scope) {
 	}];
 }
 
-function RocksCtrl() {
-	
+function AllRocksCtrl($scope) {
+	$scope.rocks = [{
+		'title': 'Governance meeting deck'
+	}, {
+		'title': 'Followup Commercial status'
+	}, {
+		'title': 'Establish a connection with Maree'
+	}, {
+		'title': 'Revise LD plan'
+	}, {
+		'title': 'Send out leave request of Christmas'
+	}, {
+		'title': "Prepare for Tuesday's session"
+	}];
 }
 
 function StatsCtrl() {

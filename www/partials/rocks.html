@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html ng-app>
-<head>
-	<title>All My Rocks</title>
-</head>
-
-<body>
+<div ng-controller="AllRocksCtrl">
 	<h1>All My Rocks</h1>
 	<ul>
+		<li ng-repeat="rock in rocks" class='rock'>
+			{{rock.title}}
+		</li>		
 	</ul>
-</body>
-</html>
+	
+	<span class='span2'>
+		<button class='btn btn-primary'><i class="icon-ok icon-white"></i>CREATE</button>
+	</span>
+
+	<span class='span2'>
+		<button class='btn btn-danger'><i class="icon-remove icon-white"></i>DELETE</button>
+	</span>
+</div>
