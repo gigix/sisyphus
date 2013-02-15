@@ -2,20 +2,20 @@
 	<h1>All My Rocks</h1>
 	<ul>
 		<li ng-repeat="rock in rocks" class='rock'>
-			<input type='checkbox' id='rock_{{rock.id}}' />
+			<input type='checkbox' id='rock_{{rock.id}}' ng-model='selected[rock.id]' />
 			<label for='rock_{{rock.id}}' class='btn'>{{rock.title}}</label>
 		</li>		
 	</ul>
 	
 	<div class='span1 push' />
 	
-	<div class='toolbar span5'>
+	<div class='toolbar span6'>
 		<span class='span2'>
-			<button class='btn btn-primary'><i class="icon-ok icon-white"></i>CREATE</button>
+			<button class='btn btn-primary' ng-click='createRock()'><i class="icon-ok icon-white"></i>CREATE</button>
 		</span>
 
 		<span class='span2'>
-			<button class='btn btn-danger'><i class="icon-remove icon-white"></i>DELETE</button>
+			<button class='btn btn-danger' ng-click='deleteSelectedRocks()'><i class="icon-remove icon-white"></i>DELETE</button>
 		</span>
 	</div>
 </div>
